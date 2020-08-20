@@ -189,12 +189,6 @@ menuentry "Windows 10" --class windows --class os $menuentry_id_option 'osprober
     fi
     chainloader /efi/Microsoft/Boot/bootmgfw.efi
 }
-
-# LibreELEC
-menuentry "LibreELEC" --class libreelec --class gnu-linux --class gnu --class os {
-        search --set=root --label LibreELEC-System
-        linux /KERNEL boot=LABEL=LibreELEC-System disk=LABEL=LibreELEC-Data quiet
-}
 ### END /etc/grub.d/40_custom ###
 
 ### BEGIN /etc/grub.d/41_custom ###
@@ -207,10 +201,6 @@ fi
 
 ### BEGIN /etc/grub.d/50_recovery ###
 submenu 'Recovery options' --class recovery --hotkey=1 $menuentry_id_option 'gnulinux-advanced-a5ed0bf0-33f8-4307-886b-be283c4db4b8' {
-    menuentry 'LibreELEC (recovery mode)' --class libreelec --class gnu-linux --class gnu --class os {
-        search --set=root --label LibreELEC-System
-        linux /KERNEL boot=LABEL=LibreELEC-System disk=LibreELEC-Data debugging
-    }
         menuentry 'openSUSE Tumbleweed, with Linux 5.8.2-1.g71b519a-default (advanced options)'  --class opensuse --class gnu-linux --class gnu --class os $menuentry_id_option 'gnulinux-5.8.2-1.g71b519a-default-advanced-a5ed0bf0-33f8-4307-886b-be283c4db4b8' {
                 load_video
                 set gfxpayload=keep
