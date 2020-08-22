@@ -2,6 +2,8 @@
 
 This repository contains files of my grub2 configuration. It has special submenu for "advanced options" and "recovery" menu entries.
 
+![Preview](https://github.com/ceskyDJ/grub2-configs/blob/master/Preview.gif)
+
 **Example output (/boot/grub2/grub2.cnf):**
 ```
 #
